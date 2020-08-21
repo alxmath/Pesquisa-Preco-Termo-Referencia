@@ -169,6 +169,9 @@ namespace Pesquisa_Preco_Termo_Referencia
                     "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            FormTermo formTermo = new FormTermo();
+            formTermo.ShowDialog();
         }
     }
 }
