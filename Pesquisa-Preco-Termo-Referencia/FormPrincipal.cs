@@ -37,76 +37,78 @@ namespace Pesquisa_Preco_Termo_Referencia
 
             richTexto.Clear();
 
-            List<string> relevantWords = new List<string>();
-            List<Siafisico> siafisicos = new List<Siafisico>();
-            Siafisico siafisico = null;
-
-            using (StreamReader sr = File.OpenText(path))
+            try
             {
-                int i = 0;
-                while (!sr.EndOfStream)
+                List<string> relevantWords = new List<string>();
+                List<Siafisico> siafisicos = new List<Siafisico>();
+                Siafisico siafisico = null;
+
+                using (StreamReader sr = File.OpenText(path))
                 {
-                    string line = sr.ReadLine().Trim();
-                    if (line.Contains("PEDIDO DE COMPRA") || line.Contains("===")
-                        || line.Contains("PEDIDO") || line.Contains("Item Prod")
-                        || line.Contains("---") || line.Contains("SISTEMA DE MATERIAIS")
-                        || line.Contains("Quantidade") || line.Trim().Length == 0)
+                    int i = 0;
+                    while (!sr.EndOfStream)
                     {
-                        continue;
-                    }
-
-
-                    string[] words = line.Split(' ');
-                    foreach (string item in words)
-                    {
-                        if (!string.IsNullOrEmpty(item))
+                        string line = sr.ReadLine().Trim();
+                        if (line.Contains("PEDIDO DE COMPRA") || line.Contains("===")
+                            || line.Contains("PEDIDO") || line.Contains("Item Prod")
+                            || line.Contains("---") || line.Contains("SISTEMA DE MATERIAIS")
+                            || line.Contains("Quantidade") || line.Trim().Length == 0)
                         {
-                            relevantWords.Add(item);
+                            continue;
                         }
-                    }
 
-      
 
-                    //var isNumeric = int.TryParse(relevantWords[0], out _);
-
-                    if (int.TryParse(relevantWords[0], out _) && int.TryParse(relevantWords[1], out _))
-                    {
-                        siafisico = new Siafisico();
-                        siafisico.Item = relevantWords[0];
-                        siafisico.CodigoSiafisico = relevantWords[2];
-                        siafisico.Unidade = relevantWords[3];
-                        siafisico.Quantidade = double.Parse(relevantWords[4]);
-                        
-                        if (radioPregao.Checked)
+                        string[] words = line.Split(' ');
+                        foreach (string item in words)
                         {
-                            siafisico.TipoLicitacao = "O VALOR REFERENCIAL FOI OBTIDO ATRAVÉS DE PESQUISA DE PREÇO";
+                            if (!string.IsNullOrEmpty(item))
+                            {
+                                relevantWords.Add(item);
+                            }
+                        }
+
+                        if (int.TryParse(relevantWords[0], out _) && int.TryParse(relevantWords[1], out _))
+                        {
+                            siafisico = new Siafisico();
+                            siafisico.Item = relevantWords[0];
+                            siafisico.CodigoSiafisico = relevantWords[2];
+                            siafisico.Unidade = relevantWords[3];
+                            siafisico.Quantidade = double.Parse(relevantWords[4]);
+
+                            //if (radioPregao.Checked)
+                            //{
+                            //    siafisico.TipoLicitacao = "O VALOR REFERENCIAL FOI OBTIDO ATRAVÉS DE PESQUISA DE PREÇO";
+                            //}
+                            //else if (radioAta.Checked || radioDispensa.Checked)
+                            //{
+                            //    siafisico.TipoLicitacao = "SERÁ ADQUIRIDO ATRAVÉS DA EMPRESA";
+                            //}
+
+                            siafisicos.Add(siafisico);
+                            i++;
                         }
                         else
                         {
-                            siafisico.TipoLicitacao = "SERÁ ADQUIRIDO ATRAVÉS DA EMPRESA";
+                            siafisicos[i - 1].Descricao += line.Trim().Replace("Descricao:", "") + " ";
                         }
 
-                        siafisicos.Add(siafisico);
-                        i++;
+                        richTexto.Text += line + "\n";
+                        relevantWords.Clear();
                     }
-                    else
-                    {
-                        siafisicos[i - 1].Descricao += line.Trim().Replace("Descricao:", "") + " ";
-                    }
-                    
-
-                  
-                    richTexto.Text += line + "\n";
-                    relevantWords.Clear();
                 }
+
+                SiafisicoReposiories.Siafisicos = siafisicos;
             }
-
-            SiafisicoReposiories.Siafisicos = siafisicos;
-
-            foreach (Siafisico siaf in siafisicos)
+            catch (Exception ex)
             {
-                Console.WriteLine(siaf);
+                MessageBox.Show(this, "Erro ao tentar abrir arquivo de texto. Certifique-se que o arquivo que está tentando abrir contenha um pedido válido: "
+                    + ex.Message, "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            //foreach (Siafisico siaf in siafisicos)
+            //{
+            //    Console.WriteLine(siaf);
+            //}
         }
 
         private void btnGerarPesquisa_Click(object sender, EventArgs e)
@@ -125,7 +127,23 @@ namespace Pesquisa_Preco_Termo_Referencia
                     "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             SiafisicoReposiories.Siafisicos[0].ProcessoPedido = txtProcessoPedido.Text.Trim();
+
+            if (radioPregao.Checked)
+            {
+                foreach (Siafisico siaf in SiafisicoReposiories.Siafisicos)
+                {
+                    siaf.TipoLicitacao = "O VALOR REFERENCIAL FOI OBTIDO ATRAVÉS DE PESQUISA DE PREÇO";
+                }
+            }
+            else if (radioAta.Checked || radioDispensa.Checked)
+            {
+                foreach (Siafisico siaf in SiafisicoReposiories.Siafisicos)
+                {
+                    siaf.TipoLicitacao = "SERÁ ADQUIRIDO ATRAVÉS DA EMPRESA";
+                }
+            }
 
             FormPesquisa formPesquisa = new FormPesquisa();
             formPesquisa.ShowDialog();
