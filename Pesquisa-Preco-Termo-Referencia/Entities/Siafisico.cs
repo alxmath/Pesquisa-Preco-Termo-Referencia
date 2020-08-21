@@ -12,19 +12,22 @@ namespace Pesquisa_Preco_Termo_Referencia.Entities
         public string Unidade { get; set; }
         public double Quantidade { get; set; }
         public string Descricao { get; set; }
+        public string TipoLicitacao { get; set; }
 
         public Siafisico()
         {
 
         }
 
-        public Siafisico(string item, string codigoSiafisico, string unidade, double quantidade, string descricao)
+        public Siafisico(string item, string codigoSiafisico, string unidade,
+            double quantidade, string descricao, string tipoLicitacao)
         {
             Item = item;
             CodigoSiafisico = codigoSiafisico;
             Unidade = unidade;
             Quantidade = quantidade;
             Descricao = descricao;
+            TipoLicitacao = tipoLicitacao;
         }
 
         public override string ToString()

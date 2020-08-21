@@ -47,8 +47,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1039, 790);
             this.Controls.Add(this.rptv1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormPesquisa";
-            this.Text = "FormPesquisa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Pesquisa de Preço - Núcleo de Compras";
             this.Load += new System.EventHandler(this.FormPesquisa_Load);
             this.ResumeLayout(false);
 

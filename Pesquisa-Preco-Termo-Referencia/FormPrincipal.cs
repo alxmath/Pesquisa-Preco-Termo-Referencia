@@ -74,7 +74,16 @@ namespace Pesquisa_Preco_Termo_Referencia
                         siafisico.CodigoSiafisico = relevantWords[2];
                         siafisico.Unidade = relevantWords[3];
                         siafisico.Quantidade = double.Parse(relevantWords[4]);
-                        //Console.WriteLine(siafisico);
+                        
+                        if (radioPregao.Checked)
+                        {
+                            siafisico.TipoLicitacao = "O VALOR REFERENCIAL FOI OBTIDO ATRAVÉS DE PESQUISA DE PREÇO";
+                        }
+                        else
+                        {
+                            siafisico.TipoLicitacao = "ATA DE REGISTRO DE PREÇO";
+                        }
+
                         siafisicos.Add(siafisico);
                         i++;
                     }
@@ -100,8 +109,45 @@ namespace Pesquisa_Preco_Termo_Referencia
 
         private void btnGerarPesquisa_Click(object sender, EventArgs e)
         {
+
+            if (richTexto.Text == string.Empty)
+            {
+                MessageBox.Show(this, "Favor selecionar o arquivo de texto com os dados antes de gerar a Pesquisa de Preço.",
+                    "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (radioAta.Checked == false && radioPregao.Checked == false)
+            {
+                MessageBox.Show(this, "Favor selecionar o tipo de licitação: Ata de Registro ou Pregão Eletrônico",
+                    "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             FormPesquisa formPesquisa = new FormPesquisa();
             formPesquisa.ShowDialog();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnTermo_Click(object sender, EventArgs e)
+        {
+            if (richTexto.Text == string.Empty)
+            {
+                MessageBox.Show(this, "Favor selecionar o arquivo de texto com os dados antes de gerar o Termo de Referência.",
+                    "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (radioAta.Checked == false && radioPregao.Checked == false)
+            {
+                MessageBox.Show(this, "Favor selecionar o tipo de licitação: Ata de Registro ou Pregão Eletrônico",
+                    "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
     }
 }
