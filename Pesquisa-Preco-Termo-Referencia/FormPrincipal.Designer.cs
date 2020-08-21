@@ -33,10 +33,13 @@
             this.ofd = new System.Windows.Forms.OpenFileDialog();
             this.btnGerarPesquisa = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioPregao = new System.Windows.Forms.RadioButton();
+            this.radioDispensa = new System.Windows.Forms.RadioButton();
             this.radioAta = new System.Windows.Forms.RadioButton();
+            this.radioPregao = new System.Windows.Forms.RadioButton();
             this.btnTermo = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.txtProcessoPedido = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,45 +80,58 @@
             this.btnGerarPesquisa.Location = new System.Drawing.Point(532, 564);
             this.btnGerarPesquisa.Name = "btnGerarPesquisa";
             this.btnGerarPesquisa.Size = new System.Drawing.Size(150, 37);
-            this.btnGerarPesquisa.TabIndex = 2;
+            this.btnGerarPesquisa.TabIndex = 5;
             this.btnGerarPesquisa.Text = "Gerar Pesquisa";
             this.btnGerarPesquisa.UseVisualStyleBackColor = false;
             this.btnGerarPesquisa.Click += new System.EventHandler(this.btnGerarPesquisa_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.radioDispensa);
             this.groupBox1.Controls.Add(this.radioAta);
             this.groupBox1.Controls.Add(this.radioPregao);
             this.groupBox1.Location = new System.Drawing.Point(12, 21);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(670, 69);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo de Licitação";
             // 
-            // radioPregao
+            // radioDispensa
             // 
-            this.radioPregao.AutoSize = true;
-            this.radioPregao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioPregao.Location = new System.Drawing.Point(48, 30);
-            this.radioPregao.Name = "radioPregao";
-            this.radioPregao.Size = new System.Drawing.Size(139, 21);
-            this.radioPregao.TabIndex = 0;
-            this.radioPregao.TabStop = true;
-            this.radioPregao.Text = "Pregão Eletrônico";
-            this.radioPregao.UseVisualStyleBackColor = true;
+            this.radioDispensa.AutoSize = true;
+            this.radioDispensa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioDispensa.Location = new System.Drawing.Point(458, 24);
+            this.radioDispensa.Name = "radioDispensa";
+            this.radioDispensa.Size = new System.Drawing.Size(165, 21);
+            this.radioDispensa.TabIndex = 2;
+            this.radioDispensa.TabStop = true;
+            this.radioDispensa.Text = "Dispensa de Licitação";
+            this.radioDispensa.UseVisualStyleBackColor = true;
             // 
             // radioAta
             // 
             this.radioAta.AutoSize = true;
             this.radioAta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioAta.Location = new System.Drawing.Point(230, 30);
+            this.radioAta.Location = new System.Drawing.Point(286, 24);
             this.radioAta.Name = "radioAta";
             this.radioAta.Size = new System.Drawing.Size(124, 21);
-            this.radioAta.TabIndex = 0;
+            this.radioAta.TabIndex = 1;
             this.radioAta.TabStop = true;
             this.radioAta.Text = "Ata de Registro";
             this.radioAta.UseVisualStyleBackColor = true;
+            // 
+            // radioPregao
+            // 
+            this.radioPregao.AutoSize = true;
+            this.radioPregao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioPregao.Location = new System.Drawing.Point(48, 24);
+            this.radioPregao.Name = "radioPregao";
+            this.radioPregao.Size = new System.Drawing.Size(190, 21);
+            this.radioPregao.TabIndex = 0;
+            this.radioPregao.TabStop = true;
+            this.radioPregao.Text = "Pregão Eletrônico/Convite";
+            this.radioPregao.UseVisualStyleBackColor = true;
             // 
             // btnTermo
             // 
@@ -138,10 +154,28 @@
             this.btnSair.Location = new System.Drawing.Point(12, 564);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(150, 37);
-            this.btnSair.TabIndex = 5;
+            this.btnSair.TabIndex = 3;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // txtProcessoPedido
+            // 
+            this.txtProcessoPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProcessoPedido.Location = new System.Drawing.Point(477, 116);
+            this.txtProcessoPedido.Name = "txtProcessoPedido";
+            this.txtProcessoPedido.Size = new System.Drawing.Size(205, 23);
+            this.txtProcessoPedido.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(352, 119);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Processo/Pedido:";
             // 
             // FormPrincipal
             // 
@@ -149,6 +183,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(694, 613);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtProcessoPedido);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnTermo);
             this.Controls.Add(this.groupBox1);
@@ -163,6 +199,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -177,6 +214,9 @@
         private System.Windows.Forms.RadioButton radioPregao;
         private System.Windows.Forms.Button btnTermo;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.RadioButton radioDispensa;
+        private System.Windows.Forms.TextBox txtProcessoPedido;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -35,6 +35,8 @@ namespace Pesquisa_Preco_Termo_Referencia
                 return;
             }
 
+            richTexto.Clear();
+
             List<string> relevantWords = new List<string>();
             List<Siafisico> siafisicos = new List<Siafisico>();
             Siafisico siafisico = null;
@@ -81,7 +83,7 @@ namespace Pesquisa_Preco_Termo_Referencia
                         }
                         else
                         {
-                            siafisico.TipoLicitacao = "ATA DE REGISTRO DE PREÇO";
+                            siafisico.TipoLicitacao = "SERÁ ADQUIRIDO ATRAVÉS DA EMPRESA";
                         }
 
                         siafisicos.Add(siafisico);
@@ -109,7 +111,7 @@ namespace Pesquisa_Preco_Termo_Referencia
 
         private void btnGerarPesquisa_Click(object sender, EventArgs e)
         {
-
+            
             if (richTexto.Text == string.Empty)
             {
                 MessageBox.Show(this, "Favor selecionar o arquivo de texto com os dados antes de gerar a Pesquisa de Preço.",
@@ -117,12 +119,13 @@ namespace Pesquisa_Preco_Termo_Referencia
                 return;
             }
 
-            if (radioAta.Checked == false && radioPregao.Checked == false)
+            if (radioAta.Checked == false && radioPregao.Checked == false && radioDispensa.Checked == false)
             {
-                MessageBox.Show(this, "Favor selecionar o tipo de licitação: Ata de Registro ou Pregão Eletrônico",
+                MessageBox.Show(this, "Favor selecionar o tipo de licitação.",
                     "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            SiafisicoReposiories.Siafisicos[0].ProcessoPedido = txtProcessoPedido.Text.Trim();
 
             FormPesquisa formPesquisa = new FormPesquisa();
             formPesquisa.ShowDialog();

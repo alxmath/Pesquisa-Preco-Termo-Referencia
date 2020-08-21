@@ -13,6 +13,7 @@ namespace Pesquisa_Preco_Termo_Referencia.Entities
         public double Quantidade { get; set; }
         public string Descricao { get; set; }
         public string TipoLicitacao { get; set; }
+        public string ProcessoPedido { get; set; }
 
         public Siafisico()
         {
@@ -20,7 +21,7 @@ namespace Pesquisa_Preco_Termo_Referencia.Entities
         }
 
         public Siafisico(string item, string codigoSiafisico, string unidade,
-            double quantidade, string descricao, string tipoLicitacao)
+            double quantidade, string descricao, string tipoLicitacao, string processoPedido)
         {
             Item = item;
             CodigoSiafisico = codigoSiafisico;
@@ -28,6 +29,7 @@ namespace Pesquisa_Preco_Termo_Referencia.Entities
             Quantidade = quantidade;
             Descricao = descricao;
             TipoLicitacao = tipoLicitacao;
+            ProcessoPedido = processoPedido;
         }
 
         public override string ToString()
