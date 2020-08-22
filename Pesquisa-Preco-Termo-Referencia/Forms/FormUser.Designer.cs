@@ -39,9 +39,6 @@
             this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.btnEscolher = new System.Windows.Forms.Button();
             this.btnAdicionar = new System.Windows.Forms.Button();
-            this.columnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnRG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
@@ -153,15 +150,13 @@
             this.dgvUsers.AllowUserToDeleteRows = false;
             this.dgvUsers.BackgroundColor = System.Drawing.Color.White;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.columnNome,
-            this.columnRG,
-            this.columnCargo});
             this.dgvUsers.Location = new System.Drawing.Point(17, 40);
+            this.dgvUsers.MultiSelect = false;
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
             this.dgvUsers.RowHeadersVisible = false;
             this.dgvUsers.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsers.Size = new System.Drawing.Size(600, 259);
             this.dgvUsers.TabIndex = 0;
             // 
@@ -175,6 +170,7 @@
             this.btnEscolher.TabIndex = 1;
             this.btnEscolher.Text = "Escolher Assinatura Selecionada";
             this.btnEscolher.UseVisualStyleBackColor = false;
+            this.btnEscolher.Click += new System.EventHandler(this.btnEscolher_Click);
             // 
             // btnAdicionar
             // 
@@ -187,27 +183,6 @@
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = false;
             // 
-            // columnNome
-            // 
-            this.columnNome.HeaderText = "Nome";
-            this.columnNome.Name = "columnNome";
-            this.columnNome.ReadOnly = true;
-            this.columnNome.Width = 200;
-            // 
-            // columnRG
-            // 
-            this.columnRG.HeaderText = "RG";
-            this.columnRG.Name = "columnRG";
-            this.columnRG.ReadOnly = true;
-            this.columnRG.Width = 150;
-            // 
-            // columnCargo
-            // 
-            this.columnCargo.HeaderText = "Cargo";
-            this.columnCargo.Name = "columnCargo";
-            this.columnCargo.ReadOnly = true;
-            this.columnCargo.Width = 220;
-            // 
             // FormUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,8 +190,13 @@
             this.ClientSize = new System.Drawing.Size(993, 386);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Adicionar/Escolher Assinatura - Núcleo de Compras";
+            this.Load += new System.EventHandler(this.FormUser_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -238,8 +218,5 @@
         private System.Windows.Forms.DataGridView dgvUsers;
         private System.Windows.Forms.Button btnEscolher;
         private System.Windows.Forms.Button btnAdicionar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnRG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnCargo;
     }
 }

@@ -74,6 +74,7 @@ namespace Pesquisa_Preco_Termo_Referencia
                             siafisico.CodigoSiafisico = relevantWords[2];
                             siafisico.Unidade = relevantWords[3];
                             siafisico.Quantidade = double.Parse(relevantWords[4]);
+                            siafisico.Now = DateTime.Now.ToLongDateString();
 
                             //if (radioPregao.Checked)
                             //{
@@ -113,7 +114,10 @@ namespace Pesquisa_Preco_Termo_Referencia
 
         private void btnGerarPesquisa_Click(object sender, EventArgs e)
         {
-            
+
+            FormUser formUser = new FormUser();
+            formUser.ShowDialog();
+
             if (richTexto.Text == string.Empty)
             {
                 MessageBox.Show(this, "Favor selecionar o arquivo de texto com os dados antes de gerar a Pesquisa de Preço.",

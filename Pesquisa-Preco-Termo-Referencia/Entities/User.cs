@@ -10,7 +10,7 @@ namespace Pesquisa_Preco_Termo_Referencia.Entities
     {
         public string Nome { get; set; }
         public string RG { get; set; }
-        public int Cargo { get; set; }
+        public string Cargo { get; set; }
 
 
         public User()
@@ -18,7 +18,7 @@ namespace Pesquisa_Preco_Termo_Referencia.Entities
 
         }
 
-        public User(string nome, string rG, int cargo)
+        public User(string nome, string rG, string cargo)
         {
             Nome = nome;
             RG = rG;
