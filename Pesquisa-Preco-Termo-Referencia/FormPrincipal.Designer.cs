@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.richTexto = new System.Windows.Forms.RichTextBox();
             this.btnAbrir = new System.Windows.Forms.Button();
             this.ofd = new System.Windows.Forms.OpenFileDialog();
@@ -40,6 +41,7 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.txtProcessoPedido = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.toolTipPrincipal = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +66,8 @@
             this.btnAbrir.Size = new System.Drawing.Size(187, 37);
             this.btnAbrir.TabIndex = 1;
             this.btnAbrir.Text = "Abrir Arquivo de Texto ...";
+            this.toolTipPrincipal.SetToolTip(this.btnAbrir, "\r\nClique neste botão para importar o aquivo de\r\ntexto com os dados do pedido de c" +
+        "ompras.");
             this.btnAbrir.UseVisualStyleBackColor = false;
             this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
@@ -82,6 +86,7 @@
             this.btnGerarPesquisa.Size = new System.Drawing.Size(150, 37);
             this.btnGerarPesquisa.TabIndex = 5;
             this.btnGerarPesquisa.Text = "Gerar Pesquisa";
+            this.toolTipPrincipal.SetToolTip(this.btnGerarPesquisa, "\r\nGera a pesquisa de preços.");
             this.btnGerarPesquisa.UseVisualStyleBackColor = false;
             this.btnGerarPesquisa.Click += new System.EventHandler(this.btnGerarPesquisa_Click);
             // 
@@ -98,6 +103,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo de Licitação";
+            this.toolTipPrincipal.SetToolTip(this.groupBox1, "\r\nEscolha aqui o tipo de licitação.");
             // 
             // radioDispensa
             // 
@@ -145,6 +151,7 @@
             this.btnTermo.Size = new System.Drawing.Size(150, 37);
             this.btnTermo.TabIndex = 4;
             this.btnTermo.Text = "Gerar Termo de Ref.";
+            this.toolTipPrincipal.SetToolTip(this.btnTermo, "\r\nGera o termo de referência.");
             this.btnTermo.UseVisualStyleBackColor = false;
             this.btnTermo.Click += new System.EventHandler(this.btnTermo_Click);
             // 
@@ -158,6 +165,7 @@
             this.btnSair.Size = new System.Drawing.Size(150, 37);
             this.btnSair.TabIndex = 3;
             this.btnSair.Text = "Sair";
+            this.toolTipPrincipal.SetToolTip(this.btnSair, "\r\nFecha o programa.");
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
@@ -168,6 +176,7 @@
             this.txtProcessoPedido.Name = "txtProcessoPedido";
             this.txtProcessoPedido.Size = new System.Drawing.Size(205, 23);
             this.txtProcessoPedido.TabIndex = 2;
+            this.toolTipPrincipal.SetToolTip(this.txtProcessoPedido, "\r\nCampo opcional.");
             // 
             // label1
             // 
@@ -179,6 +188,15 @@
             this.label1.Size = new System.Drawing.Size(119, 17);
             this.label1.TabIndex = 7;
             this.label1.Text = "Processo/Pedido:";
+            // 
+            // toolTipPrincipal
+            // 
+            this.toolTipPrincipal.AutoPopDelay = 5000;
+            this.toolTipPrincipal.InitialDelay = 500;
+            this.toolTipPrincipal.IsBalloon = true;
+            this.toolTipPrincipal.ReshowDelay = 100;
+            this.toolTipPrincipal.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTipPrincipal.ToolTipTitle = "Ajuda Rápida";
             // 
             // FormPrincipal
             // 
@@ -219,6 +237,7 @@
         private System.Windows.Forms.RadioButton radioDispensa;
         private System.Windows.Forms.TextBox txtProcessoPedido;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolTip toolTipPrincipal;
     }
 }
 

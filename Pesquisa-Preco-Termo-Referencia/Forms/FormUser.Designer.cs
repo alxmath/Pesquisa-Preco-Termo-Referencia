@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtRg = new System.Windows.Forms.TextBox();
-            this.txtCargo = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.btnEscolher = new System.Windows.Forms.Button();
             this.btnAdicionar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbxCargo = new System.Windows.Forms.ComboBox();
+            this.txtRg = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnEscolher = new System.Windows.Forms.Button();
+            this.dgvUsers = new System.Windows.Forms.DataGridView();
+            this.toolTipUser = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
@@ -50,7 +52,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtCargo);
+            this.groupBox1.Controls.Add(this.cbxCargo);
             this.groupBox1.Controls.Add(this.txtRg);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -61,6 +63,89 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Adicionar Nova Assinatura";
+            // 
+            // btnAdicionar
+            // 
+            this.btnAdicionar.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnAdicionar.ForeColor = System.Drawing.Color.White;
+            this.btnAdicionar.Location = new System.Drawing.Point(201, 317);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(101, 37);
+            this.btnAdicionar.TabIndex = 3;
+            this.btnAdicionar.Text = "Adicionar";
+            this.toolTipUser.SetToolTip(this.btnAdicionar, "\r\nAdiciona uma assinatura com os valores dos campos acima.\r\nEssa ação já envia pa" +
+        "ra o termo ou a pesquisa a assinatura adicionada.");
+            this.btnAdicionar.UseVisualStyleBackColor = false;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(24, 133);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Cargo";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(24, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "RG";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nome";
+            // 
+            // cbxCargo
+            // 
+            this.cbxCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCargo.FormattingEnabled = true;
+            this.cbxCargo.Items.AddRange(new object[] {
+            "Agente de Saúde",
+            "Auxiliar Administrativo",
+            "Auxiliar de Enfermagem",
+            "Auxiliar de Saúde",
+            "Auxiliar de Serviços",
+            "Diretor I",
+            "Diretor Técnico de Saúde I",
+            "Diretor Técnico de Saúde II",
+            "Diretor Técnico I",
+            "Oficial de Saúde",
+            "Técnico de Enfermagem"});
+            this.cbxCargo.Location = new System.Drawing.Point(27, 151);
+            this.cbxCargo.Name = "cbxCargo";
+            this.cbxCargo.Size = new System.Drawing.Size(275, 24);
+            this.cbxCargo.Sorted = true;
+            this.cbxCargo.TabIndex = 2;
+            // 
+            // txtRg
+            // 
+            this.txtRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRg.Location = new System.Drawing.Point(27, 103);
+            this.txtRg.Name = "txtRg";
+            this.txtRg.Size = new System.Drawing.Size(275, 23);
+            this.txtRg.TabIndex = 1;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(27, 56);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(275, 23);
+            this.txtNome.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -74,75 +159,21 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Escolher Assinatura";
+            this.toolTipUser.SetToolTip(this.groupBox2, "\r\nTabela com assinaturas cadastradas. Se não houver assinaturas,\r\npreencha os cam" +
+        "pos ao lado e clique em adicionar.");
             // 
-            // txtNome
+            // btnEscolher
             // 
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(27, 56);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(275, 23);
-            this.txtNome.TabIndex = 0;
-            // 
-            // txtRg
-            // 
-            this.txtRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRg.Location = new System.Drawing.Point(27, 103);
-            this.txtRg.Name = "txtRg";
-            this.txtRg.Size = new System.Drawing.Size(275, 23);
-            this.txtRg.TabIndex = 1;
-            // 
-            // txtCargo
-            // 
-            this.txtCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCargo.FormattingEnabled = true;
-            this.txtCargo.Items.AddRange(new object[] {
-            "Agente de Saúde",
-            "Auxiliar Administrativo",
-            "Auxiliar de Enfermagem",
-            "Auxiliar de Saúde",
-            "Auxiliar de Serviços",
-            "Diretor I",
-            "Diretor Técnico de Saúde I",
-            "Diretor Técnico de Saúde II",
-            "Diretor Técnico I",
-            "Oficial de Saúde",
-            "Técnico de Enfermagem"});
-            this.txtCargo.Location = new System.Drawing.Point(27, 151);
-            this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(275, 24);
-            this.txtCargo.Sorted = true;
-            this.txtCargo.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nome";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "RG";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 133);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Cargo";
+            this.btnEscolher.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnEscolher.ForeColor = System.Drawing.Color.White;
+            this.btnEscolher.Location = new System.Drawing.Point(387, 317);
+            this.btnEscolher.Name = "btnEscolher";
+            this.btnEscolher.Size = new System.Drawing.Size(230, 37);
+            this.btnEscolher.TabIndex = 1;
+            this.btnEscolher.Text = "Escolher Assinatura Selecionada";
+            this.toolTipUser.SetToolTip(this.btnEscolher, "\r\nEnvia a assinatura selecionada acima para o termo ou pesquisa.");
+            this.btnEscolher.UseVisualStyleBackColor = false;
+            this.btnEscolher.Click += new System.EventHandler(this.btnEscolher_Click);
             // 
             // dgvUsers
             // 
@@ -160,28 +191,16 @@
             this.dgvUsers.Size = new System.Drawing.Size(600, 259);
             this.dgvUsers.TabIndex = 0;
             // 
-            // btnEscolher
+            // toolTipUser
             // 
-            this.btnEscolher.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnEscolher.ForeColor = System.Drawing.Color.White;
-            this.btnEscolher.Location = new System.Drawing.Point(387, 317);
-            this.btnEscolher.Name = "btnEscolher";
-            this.btnEscolher.Size = new System.Drawing.Size(230, 37);
-            this.btnEscolher.TabIndex = 1;
-            this.btnEscolher.Text = "Escolher Assinatura Selecionada";
-            this.btnEscolher.UseVisualStyleBackColor = false;
-            this.btnEscolher.Click += new System.EventHandler(this.btnEscolher_Click);
-            // 
-            // btnAdicionar
-            // 
-            this.btnAdicionar.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnAdicionar.ForeColor = System.Drawing.Color.White;
-            this.btnAdicionar.Location = new System.Drawing.Point(201, 317);
-            this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(101, 37);
-            this.btnAdicionar.TabIndex = 3;
-            this.btnAdicionar.Text = "Adicionar";
-            this.btnAdicionar.UseVisualStyleBackColor = false;
+            this.toolTipUser.AutoPopDelay = 10000;
+            this.toolTipUser.ForeColor = System.Drawing.Color.DarkCyan;
+            this.toolTipUser.InitialDelay = 500;
+            this.toolTipUser.IsBalloon = true;
+            this.toolTipUser.ReshowDelay = 100;
+            this.toolTipUser.ShowAlways = true;
+            this.toolTipUser.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTipUser.ToolTipTitle = "Ajuda Rápida";
             // 
             // FormUser
             // 
@@ -196,6 +215,7 @@
             this.Name = "FormUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Adicionar/Escolher Assinatura - Núcleo de Compras";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormUser_FormClosing);
             this.Load += new System.EventHandler(this.FormUser_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -211,12 +231,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox txtCargo;
+        private System.Windows.Forms.ComboBox cbxCargo;
         private System.Windows.Forms.TextBox txtRg;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvUsers;
         private System.Windows.Forms.Button btnEscolher;
         private System.Windows.Forms.Button btnAdicionar;
+        private System.Windows.Forms.ToolTip toolTipUser;
     }
 }

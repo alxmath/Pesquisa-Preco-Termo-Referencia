@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Pesquisa_Preco_Termo_Referencia.Entities
+﻿namespace Pesquisa_Preco_Termo_Referencia.Entities
 {
     class Siafisico
     {
@@ -24,27 +19,6 @@ namespace Pesquisa_Preco_Termo_Referencia.Entities
         {
 
         }
-
-        //public Siafisico(string item, string codigoSiafisico, string unidade,
-        //    double quantidade, string descricao, string tipoLicitacao, string processoPedido)
-        //{
-        //    Item = item;
-        //    CodigoSiafisico = codigoSiafisico;
-        //    Unidade = unidade;
-        //    Quantidade = quantidade;
-        //    Descricao = descricao;
-        //    TipoLicitacao = tipoLicitacao;
-        //    ProcessoPedido = processoPedido;
-        //}
-
-        //public Siafisico(string item, string codigoSiafisico, string unidade, 
-        //    double quantidade, string descricao, string tipoLicitacao, string processoPedido, 
-        //    string nome, string rG, string cargo) : this(item, codigoSiafisico, unidade, quantidade, descricao, tipoLicitacao, processoPedido)
-        //{
-        //    Nome = nome;
-        //    RG = rG;
-        //    Cargo = cargo;
-        //}
 
         public override string ToString()
         {
