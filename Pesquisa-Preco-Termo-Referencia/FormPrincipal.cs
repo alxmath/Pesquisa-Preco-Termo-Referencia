@@ -133,8 +133,13 @@ namespace Pesquisa_Preco_Termo_Referencia
             }
 
             SiafisicoReposiories.Siafisicos[0].ProcessoPedido = txtProcessoPedido.Text.Trim();
+            
+            if (cbxLoteItem.Text == "lote")
+            {
+                SiafisicoReposiories.Siafisicos[0].TipoLicitacaoLoteItem = "Licitação por " + cbxLoteItem.Text;
+            }
 
-            if (radioPregao.Checked)
+            if (radioPregao.Checked || radioConvite.Checked)
             {
                 foreach (Siafisico siaf in SiafisicoReposiories.Siafisicos)
                 {
@@ -174,8 +179,29 @@ namespace Pesquisa_Preco_Termo_Referencia
                 return;
             }
 
+            FormAssuntoTermo formAssuntoTermo = new FormAssuntoTermo();
+            formAssuntoTermo.ShowDialog();
+
             FormTermo formTermo = new FormTermo();
             formTermo.ShowDialog();
+        }
+
+        private void radioPregao_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxLoteItem.Visible == true)
+            {
+                cbxLoteItem.Visible = false;
+            }
+            else
+            {
+                cbxLoteItem.Visible = true;
+            }
+        }
+
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            radioPregao.Checked = false;
+            cbxLoteItem.SelectedIndex = 1;
         }
     }
 }

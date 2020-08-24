@@ -927,6 +927,20 @@
                   <FontSize>8pt</FontSize>
                 </Style>
               </TextRun>
+              <TextRun>
+                <Value xml:space="preserve"> </Value>
+                <Style>
+                  <FontFamily>Verdana</FontFamily>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Fields!TipoLicitacaoLoteItem.Value</Value>
+                <Style>
+                  <FontFamily>Verdana</FontFamily>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
             </TextRuns>
             <Style>
               <TextAlign>Left</TextAlign>
@@ -1048,6 +1062,20 @@
             <TextRuns>
               <TextRun>
                 <Value>Núcleo de Compras</Value>
+                <Style>
+                  <FontFamily>Verdana</FontFamily>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
                 <Style>
                   <FontFamily>Verdana</FontFamily>
                   <FontSize>8pt</FontSize>
@@ -1264,6 +1292,10 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
+        <Field Name="Assunto">
+          <DataField>Assunto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="Cargo">
           <DataField>Cargo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -1302,6 +1334,10 @@
         </Field>
         <Field Name="TipoLicitacao">
           <DataField>TipoLicitacao</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TipoLicitacaoLoteItem">
+          <DataField>TipoLicitacaoLoteItem</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Unidade">

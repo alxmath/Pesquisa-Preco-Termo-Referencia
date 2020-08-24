@@ -73,6 +73,12 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormAssuntoTermo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAssuntoTermo.Designer.cs">
+      <DependentUpon>FormAssuntoTermo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormPesquisa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAssuntoTermo.resx">
+      <DependentUpon>FormAssuntoTermo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormPesquisa.resx">
       <DependentUpon>FormPesquisa.cs</DependentUpon>
@@ -135,6 +144,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Data\ordenador.txt" />
     <Content Include="Data\users.txt" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

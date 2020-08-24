@@ -9,11 +9,13 @@
         public string Descricao { get; set; }
         public string TipoLicitacao { get; set; }
         public string ProcessoPedido { get; set; }
+        public string TipoLicitacaoLoteItem { get; set; }
 
         public string Nome { get; set; }
         public string RG { get; set; }
         public string Cargo { get; set; }
         public string Now { get; set; }
+        public string Assunto { get; set; }
 
         public Siafisico()
         {
