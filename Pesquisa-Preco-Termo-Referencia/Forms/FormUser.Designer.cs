@@ -32,9 +32,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxCargo = new System.Windows.Forms.ComboBox();
+            this.txtNucleo = new System.Windows.Forms.TextBox();
             this.txtRg = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -50,9 +52,11 @@
             // 
             this.groupBox1.Controls.Add(this.btnAdicionar);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cbxCargo);
+            this.groupBox1.Controls.Add(this.txtNucleo);
             this.groupBox1.Controls.Add(this.txtRg);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -87,6 +91,16 @@
             this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Cargo";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(24, 183);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 17);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Núcleo";
             // 
             // label2
             // 
@@ -130,6 +144,14 @@
             this.cbxCargo.Size = new System.Drawing.Size(231, 24);
             this.cbxCargo.Sorted = true;
             this.cbxCargo.TabIndex = 2;
+            // 
+            // txtNucleo
+            // 
+            this.txtNucleo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNucleo.Location = new System.Drawing.Point(27, 202);
+            this.txtNucleo.Name = "txtNucleo";
+            this.txtNucleo.Size = new System.Drawing.Size(231, 23);
+            this.txtNucleo.TabIndex = 1;
             // 
             // txtRg
             // 
@@ -186,7 +208,6 @@
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
             this.dgvUsers.RowHeadersVisible = false;
-            this.dgvUsers.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsers.Size = new System.Drawing.Size(600, 259);
             this.dgvUsers.TabIndex = 0;
@@ -239,5 +260,7 @@
         private System.Windows.Forms.Button btnEscolher;
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.ToolTip toolTipUser;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtNucleo;
     }
 }

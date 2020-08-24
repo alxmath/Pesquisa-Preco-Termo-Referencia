@@ -182,6 +182,9 @@ namespace Pesquisa_Preco_Termo_Referencia
             FormAssuntoTermo formAssuntoTermo = new FormAssuntoTermo();
             formAssuntoTermo.ShowDialog();
 
+            FormUser formUser = new FormUser();
+            formUser.ShowDialog();
+
             FormTermo formTermo = new FormTermo();
             formTermo.ShowDialog();
         }

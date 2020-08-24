@@ -635,10 +635,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!Nome.Value</Value>
+                <Value>=Fields!OrdenadorNome.Value</Value>
                 <Style>
                   <FontFamily>Verdana</FontFamily>
-                  <FontSize>8pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -652,14 +652,14 @@
                 <Value>RG: </Value>
                 <Style>
                   <FontFamily>Verdana</FontFamily>
-                  <FontSize>8pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>=Fields!RG.Value</Value>
+                <Value>=Fields!OrdenadorRG.Value</Value>
                 <Style>
                   <FontFamily>Verdana</FontFamily>
-                  <FontSize>8pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -673,7 +673,7 @@
                 <Value>Ordenador de Despesa</Value>
                 <Style>
                   <FontFamily>Verdana</FontFamily>
-                  <FontSize>8pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -684,10 +684,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!Cargo.Value</Value>
+                <Value>=Fields!OrdenadorCargo.Value</Value>
                 <Style>
                   <FontFamily>Verdana</FontFamily>
-                  <FontSize>8pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -701,7 +701,7 @@
                 <Value>Hospital Regional de Assis</Value>
                 <Style>
                   <FontFamily>Verdana</FontFamily>
-                  <FontSize>8pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -712,9 +712,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
         <Top>11.1949cm</Top>
-        <Left>5.89792cm</Left>
+        <Left>8.88117cm</Left>
         <Height>1.92292cm</Height>
-        <Width>6.20417cm</Width>
+        <Width>5.88667cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -776,6 +776,90 @@
         <Height>1.34083cm</Height>
         <Width>12.42188cm</Width>
         <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Nome.Value</Value>
+                <Style>
+                  <FontFamily>Verdana</FontFamily>
+                  <FontSize>7pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>RG: </Value>
+                <Style>
+                  <FontFamily>Verdana</FontFamily>
+                  <FontSize>7pt</FontSize>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Fields!RG.Value</Value>
+                <Style>
+                  <FontFamily>Verdana</FontFamily>
+                  <FontSize>7pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Cargo.Value</Value>
+                <Style>
+                  <FontFamily>Verdana</FontFamily>
+                  <FontSize>7pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Nucleo.Value</Value>
+                <Style>
+                  <FontFamily>Verdana</FontFamily>
+                  <FontSize>7pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox7</rd:DefaultName>
+        <Top>11.1949cm</Top>
+        <Left>2.34596cm</Left>
+        <Height>1.92292cm</Height>
+        <Width>5.88667cm</Width>
+        <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1003,6 +1087,22 @@
           <DataField>Now</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Nucleo">
+          <DataField>Nucleo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrdenadorCargo">
+          <DataField>OrdenadorCargo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrdenadorNome">
+          <DataField>OrdenadorNome</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrdenadorRG">
+          <DataField>OrdenadorRG</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="ProcessoPedido">
           <DataField>ProcessoPedido</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -1017,6 +1117,10 @@
         </Field>
         <Field Name="TipoLicitacao">
           <DataField>TipoLicitacao</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TipoLicitacaoLoteItem">
+          <DataField>TipoLicitacaoLoteItem</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Unidade">

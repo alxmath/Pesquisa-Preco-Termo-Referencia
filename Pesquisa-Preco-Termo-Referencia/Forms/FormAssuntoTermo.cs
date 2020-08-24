@@ -20,18 +20,23 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
             InitializeComponent();
         }
 
+        string[] assuntoArray = new string[5];
+        List<string> meses = new List<string>();
+
         private void btnEnviar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(richAssunto.Text))
             {
-                MessageBox.Show(this, "Favor inserir um assunto.", "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(this, "Favor inserir um assunto.", "Núcleo de Compras",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 richAssunto.Focus();
                 return;
             }
 
             if (cbxOrdenador.Text == string.Empty)
             {
-                MessageBox.Show(this, "Favor escolher o ordenador da pesquisar.", "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(this, "Favor escolher o ordenador da pesquisar.",
+                    "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cbxOrdenador.Focus();
                 return;
             }
@@ -83,12 +88,95 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
 
                     if (nome == cbxOrdenador.Text)
                     {
-                        SiafisicoReposiories.Siafisicos[0].Nome = nome;
-                        SiafisicoReposiories.Siafisicos[0].RG = rg;
-                        SiafisicoReposiories.Siafisicos[0].Cargo = cargo;
+                        SiafisicoReposiories.Siafisicos[0].OrdenadorNome = nome;
+                        SiafisicoReposiories.Siafisicos[0].OrdenadorRG = rg;
+                        SiafisicoReposiories.Siafisicos[0].OrdenadorCargo = cargo;
                     }
                 }      
             }
+        }
+
+
+        private void txtMemo_Leave(object sender, EventArgs e)
+        {
+            if (checkMemo.Checked && richAssunto.Text.Length == 0)
+            {
+                assuntoArray[0] = "Memo. " + txtMemo.Text.Trim() + " - ";
+            }
+                
+        }
+
+        private void radioServico_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioServico.Checked)
+            {
+                txtDescricao.Text = "Serviço de ";
+
+            }
+            else
+            {
+                txtDescricao.Text = "Aquisição de ";
+            }
+        }
+
+
+        private void txtDescricao_Leave(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtDescricao.Text.Trim()))
+            {
+                assuntoArray[1] = txtDescricao.Text.Trim();
+            }
+        }
+
+        private void CheckMes_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox chk = sender as CheckBox;
+            if (chk.Checked)
+            {
+                meses.Add((string)chk.Tag);
+            }
+            else
+            {
+                meses.Remove((string)chk.Tag);
+            }
+        }
+
+        private void InserirMes(CheckBox chk)
+        {
+            meses.Add(chk.Text);
+        }
+
+        private void RemoverMes(CheckBox chk)
+        {
+            meses.Remove(chk.Text);
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+            if (meses.Count == 1)
+            {
+                assuntoArray[2] = " para suprir o mês de " + meses[0];
+            }
+            else if (meses.Count > 1)
+            {
+                assuntoArray[2] = " para suprir os meses de " + meses[0] + " a " + meses[meses.Count - 1];
+            }
+        }
+
+        private void RadioLicitacao_Click(object sender, EventArgs e)
+        {
+            RadioButton radio = sender as RadioButton;
+
+            if (radio.Checked)
+            {
+                assuntoArray[3] = ", na modalidade de " + radio.Text + ", para este HRA";
+                richAssunto.Text = string.Join("", assuntoArray);
+            }
+        }
+
+        private void checkJan_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

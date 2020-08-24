@@ -11,18 +11,19 @@ namespace Pesquisa_Preco_Termo_Referencia.Entities
         public string Nome { get; set; }
         public string RG { get; set; }
         public string Cargo { get; set; }
-
+        public string Nucleo { get; set; }
 
         public User()
         {
 
         }
 
-        public User(string nome, string rG, string cargo)
+        public User(string nome, string rG, string cargo, string nucleo)
         {
             Nome = nome;
             RG = rG;
             Cargo = cargo;
+            Nucleo = nucleo;
         }
     }
 }

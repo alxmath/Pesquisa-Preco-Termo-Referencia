@@ -1061,7 +1061,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Núcleo de Compras</Value>
+                <Value>=Fields!Nucleo.Value</Value>
                 <Style>
                   <FontFamily>Verdana</FontFamily>
                   <FontSize>8pt</FontSize>
@@ -1318,6 +1318,22 @@
         </Field>
         <Field Name="Now">
           <DataField>Now</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Nucleo">
+          <DataField>Nucleo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrdenadorCargo">
+          <DataField>OrdenadorCargo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrdenadorNome">
+          <DataField>OrdenadorNome</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrdenadorRG">
+          <DataField>OrdenadorRG</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ProcessoPedido">
