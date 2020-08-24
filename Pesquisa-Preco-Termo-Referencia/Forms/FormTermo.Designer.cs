@@ -37,14 +37,14 @@
             this.rptvTermo.Location = new System.Drawing.Point(0, 0);
             this.rptvTermo.Name = "rptvTermo";
             this.rptvTermo.ServerReport.BearerToken = null;
-            this.rptvTermo.Size = new System.Drawing.Size(1039, 790);
+            this.rptvTermo.Size = new System.Drawing.Size(1039, 662);
             this.rptvTermo.TabIndex = 0;
             // 
             // FormTermo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1039, 790);
+            this.ClientSize = new System.Drawing.Size(1039, 662);
             this.Controls.Add(this.rptvTermo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;

@@ -59,7 +59,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.DarkCyan;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(324, 360);
+            this.groupBox1.Size = new System.Drawing.Size(287, 360);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Adicionar Nova Assinatura";
@@ -68,7 +68,7 @@
             // 
             this.btnAdicionar.BackColor = System.Drawing.Color.DarkCyan;
             this.btnAdicionar.ForeColor = System.Drawing.Color.White;
-            this.btnAdicionar.Location = new System.Drawing.Point(201, 317);
+            this.btnAdicionar.Location = new System.Drawing.Point(157, 317);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(101, 37);
             this.btnAdicionar.TabIndex = 3;
@@ -127,7 +127,7 @@
             "Técnico de Enfermagem"});
             this.cbxCargo.Location = new System.Drawing.Point(27, 151);
             this.cbxCargo.Name = "cbxCargo";
-            this.cbxCargo.Size = new System.Drawing.Size(275, 24);
+            this.cbxCargo.Size = new System.Drawing.Size(231, 24);
             this.cbxCargo.Sorted = true;
             this.cbxCargo.TabIndex = 2;
             // 
@@ -136,7 +136,7 @@
             this.txtRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRg.Location = new System.Drawing.Point(27, 103);
             this.txtRg.Name = "txtRg";
-            this.txtRg.Size = new System.Drawing.Size(275, 23);
+            this.txtRg.Size = new System.Drawing.Size(231, 23);
             this.txtRg.TabIndex = 1;
             // 
             // txtNome
@@ -144,7 +144,7 @@
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(27, 56);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(275, 23);
+            this.txtNome.Size = new System.Drawing.Size(231, 23);
             this.txtNome.TabIndex = 0;
             // 
             // groupBox2
@@ -153,7 +153,7 @@
             this.groupBox2.Controls.Add(this.dgvUsers);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.groupBox2.Location = new System.Drawing.Point(342, 12);
+            this.groupBox2.Location = new System.Drawing.Point(305, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(635, 360);
             this.groupBox2.TabIndex = 1;
@@ -206,7 +206,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(993, 386);
+            this.ClientSize = new System.Drawing.Size(950, 386);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

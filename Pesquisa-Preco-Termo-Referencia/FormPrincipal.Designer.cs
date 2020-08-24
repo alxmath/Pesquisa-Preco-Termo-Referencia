@@ -52,7 +52,7 @@
             this.richTexto.Location = new System.Drawing.Point(12, 218);
             this.richTexto.Name = "richTexto";
             this.richTexto.ReadOnly = true;
-            this.richTexto.Size = new System.Drawing.Size(670, 380);
+            this.richTexto.Size = new System.Drawing.Size(563, 340);
             this.richTexto.TabIndex = 0;
             this.richTexto.Text = "";
             // 
@@ -81,7 +81,7 @@
             this.btnGerarPesquisa.BackColor = System.Drawing.Color.Green;
             this.btnGerarPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerarPesquisa.ForeColor = System.Drawing.Color.White;
-            this.btnGerarPesquisa.Location = new System.Drawing.Point(532, 650);
+            this.btnGerarPesquisa.Location = new System.Drawing.Point(425, 589);
             this.btnGerarPesquisa.Name = "btnGerarPesquisa";
             this.btnGerarPesquisa.Size = new System.Drawing.Size(150, 37);
             this.btnGerarPesquisa.TabIndex = 5;
@@ -97,9 +97,9 @@
             this.groupBox1.Controls.Add(this.radioPregao);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.groupBox1.Location = new System.Drawing.Point(12, 29);
+            this.groupBox1.Location = new System.Drawing.Point(12, 16);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(670, 83);
+            this.groupBox1.Size = new System.Drawing.Size(563, 83);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo de Licitação";
@@ -109,7 +109,7 @@
             // 
             this.radioDispensa.AutoSize = true;
             this.radioDispensa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioDispensa.Location = new System.Drawing.Point(458, 31);
+            this.radioDispensa.Location = new System.Drawing.Point(367, 40);
             this.radioDispensa.Name = "radioDispensa";
             this.radioDispensa.Size = new System.Drawing.Size(165, 21);
             this.radioDispensa.TabIndex = 2;
@@ -121,7 +121,7 @@
             // 
             this.radioAta.AutoSize = true;
             this.radioAta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioAta.Location = new System.Drawing.Point(286, 31);
+            this.radioAta.Location = new System.Drawing.Point(232, 40);
             this.radioAta.Name = "radioAta";
             this.radioAta.Size = new System.Drawing.Size(124, 21);
             this.radioAta.TabIndex = 1;
@@ -133,7 +133,7 @@
             // 
             this.radioPregao.AutoSize = true;
             this.radioPregao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioPregao.Location = new System.Drawing.Point(48, 31);
+            this.radioPregao.Location = new System.Drawing.Point(31, 40);
             this.radioPregao.Name = "radioPregao";
             this.radioPregao.Size = new System.Drawing.Size(190, 21);
             this.radioPregao.TabIndex = 0;
@@ -146,7 +146,7 @@
             this.btnTermo.BackColor = System.Drawing.Color.DarkCyan;
             this.btnTermo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTermo.ForeColor = System.Drawing.Color.White;
-            this.btnTermo.Location = new System.Drawing.Point(376, 650);
+            this.btnTermo.Location = new System.Drawing.Point(269, 589);
             this.btnTermo.Name = "btnTermo";
             this.btnTermo.Size = new System.Drawing.Size(150, 37);
             this.btnTermo.TabIndex = 4;
@@ -160,7 +160,7 @@
             this.btnSair.BackColor = System.Drawing.Color.Firebrick;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.White;
-            this.btnSair.Location = new System.Drawing.Point(12, 650);
+            this.btnSair.Location = new System.Drawing.Point(12, 589);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(150, 37);
             this.btnSair.TabIndex = 3;
@@ -172,7 +172,7 @@
             // txtProcessoPedido
             // 
             this.txtProcessoPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProcessoPedido.Location = new System.Drawing.Point(477, 168);
+            this.txtProcessoPedido.Location = new System.Drawing.Point(370, 161);
             this.txtProcessoPedido.Name = "txtProcessoPedido";
             this.txtProcessoPedido.Size = new System.Drawing.Size(205, 23);
             this.txtProcessoPedido.TabIndex = 2;
@@ -183,7 +183,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label1.Location = new System.Drawing.Point(352, 171);
+            this.label1.Location = new System.Drawing.Point(245, 164);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 17);
             this.label1.TabIndex = 7;
@@ -203,7 +203,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(694, 702);
+            this.ClientSize = new System.Drawing.Size(589, 644);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtProcessoPedido);
             this.Controls.Add(this.btnSair);

@@ -38,14 +38,14 @@
             this.rptv1.Location = new System.Drawing.Point(0, 0);
             this.rptv1.Name = "rptv1";
             this.rptv1.ServerReport.BearerToken = null;
-            this.rptv1.Size = new System.Drawing.Size(1039, 790);
+            this.rptv1.Size = new System.Drawing.Size(1039, 662);
             this.rptv1.TabIndex = 0;
             // 
             // FormPesquisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1039, 790);
+            this.ClientSize = new System.Drawing.Size(1039, 662);
             this.Controls.Add(this.rptv1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;

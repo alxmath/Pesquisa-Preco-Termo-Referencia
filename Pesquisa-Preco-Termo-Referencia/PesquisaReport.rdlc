@@ -1012,6 +1012,13 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
+                <Value>RG: </Value>
+                <Style>
+                  <FontFamily>Verdana</FontFamily>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+              <TextRun>
                 <Value>=Fields!RG.Value</Value>
                 <Style>
                   <FontFamily>Verdana</FontFamily>
@@ -1037,11 +1044,25 @@
               <TextAlign>Center</TextAlign>
             </Style>
           </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Núcleo de Compras</Value>
+                <Style>
+                  <FontFamily>Verdana</FontFamily>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
         <Top>7.56391cm</Top>
         <Left>9.81445cm</Left>
-        <Height>1.36729cm</Height>
+        <Height>1.73771cm</Height>
         <Width>6.20417cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
