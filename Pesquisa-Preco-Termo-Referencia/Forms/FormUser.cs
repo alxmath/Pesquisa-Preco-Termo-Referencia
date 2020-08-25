@@ -20,7 +20,8 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
 
             try
             {
-                string userPath = Application.StartupPath.ToString() + @"..\..\..\Data\users.txt";
+                //string userPath = Application.StartupPath.ToString() + @"..\..\..\Data\users.txt";
+                string userPath = Application.StartupPath.ToString() + @"\Data\users.txt";
                 List<User> users = new List<User>();
 
                 using (StreamReader sr = File.OpenText(userPath))
@@ -109,7 +110,8 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
 
             try
             {
-                string userPath = Application.StartupPath.ToString() + @"..\..\..\Data\users.txt";
+                //string userPath = Application.StartupPath.ToString() + @"..\..\..\Data\users.txt";
+                string userPath = Application.StartupPath.ToString() + @"\Data\users.txt";
                 using (StreamWriter sw = File.AppendText(userPath))
                 {
                     sw.WriteLine(nome + "," + rg + "," + cargo + "," + nucleo);

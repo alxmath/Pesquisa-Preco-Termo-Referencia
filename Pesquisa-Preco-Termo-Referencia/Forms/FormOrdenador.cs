@@ -42,7 +42,8 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
 
             try
             {
-                string ordenadorPath = Application.StartupPath.ToString() + @"..\..\..\Data\ordenador.txt";
+                //string ordenadorPath = Application.StartupPath.ToString() + @"..\..\..\Data\ordenador.txt";
+                string ordenadorPath = Application.StartupPath.ToString() + @"\Data\ordenador.txt";
                 using (StreamWriter sw = File.AppendText(ordenadorPath))
                 {
                     sw.WriteLine(nome + "," + rg + "," + cargo + "," + isAtual);

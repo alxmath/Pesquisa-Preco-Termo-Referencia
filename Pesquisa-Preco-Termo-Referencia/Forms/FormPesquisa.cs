@@ -24,7 +24,8 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
 
                 rptv1.LocalReport.DataSources.Clear();
                 rptv1.LocalReport.ReportEmbeddedResource = "Pesquisa-Preco-Termo-Referencia.PesquisaReport.rdlc";
-                rptv1.LocalReport.ReportPath = "../../PesquisaReport.rdlc";
+                //rptv1.LocalReport.ReportPath = "../../PesquisaReport.rdlc";
+                rptv1.LocalReport.ReportPath = "PesquisaReport.rdlc";
                 Microsoft.Reporting.WinForms.ReportDataSource ds = new Microsoft.Reporting.WinForms.ReportDataSource("SiafisicoDS", siafisicos);
                 Microsoft.Reporting.WinForms.ReportDataSource userDS = new Microsoft.Reporting.WinForms.ReportDataSource("UserDS", users);
                 Microsoft.Reporting.WinForms.ReportDataSource ordenadorDS = new Microsoft.Reporting.WinForms.ReportDataSource("OrdenadorDS", ordenadores);

@@ -51,7 +51,8 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
 
             cbxOrdenador.DataSource = null;
             List<string> ordernadores = new List<string>();
-            string userPath = Application.StartupPath.ToString() + @"..\..\..\Data\ordenador.txt";
+            //string userPath = Application.StartupPath.ToString() + @"..\..\..\Data\ordenador.txt";
+            string userPath = Application.StartupPath.ToString() + @"\Data\ordenador.txt";
 
             using (StreamReader sr = File.OpenText(userPath))
             {
@@ -75,7 +76,8 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
                 return;
             }
 
-            string userPath = Application.StartupPath.ToString() + @"..\..\..\Data\ordenador.txt";
+            //string userPath = Application.StartupPath.ToString() + @"..\..\..\Data\ordenador.txt";
+            string userPath = Application.StartupPath.ToString() + @"\Data\ordenador.txt";
 
             using (StreamReader sr = File.OpenText(userPath))
             {

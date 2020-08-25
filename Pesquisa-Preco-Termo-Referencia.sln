@@ -5,16 +5,20 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pesquisa-Preco-Termo-Referencia", "Pesquisa-Preco-Termo-Referencia\Pesquisa-Preco-Termo-Referencia.csproj", "{A8D759B7-FAE4-4694-B517-0BF6AFE2411E}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TermoPesquisa_Setup", "TermoPesquisa_Setup\TermoPesquisa_Setup.vdproj", "{746F013A-2B5B-4F2D-8B80-FCC1602E6AD8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A8D759B7-FAE4-4694-B517-0BF6AFE2411E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A8D759B7-FAE4-4694-B517-0BF6AFE2411E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8D759B7-FAE4-4694-B517-0BF6AFE2411E}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{A8D759B7-FAE4-4694-B517-0BF6AFE2411E}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{A8D759B7-FAE4-4694-B517-0BF6AFE2411E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8D759B7-FAE4-4694-B517-0BF6AFE2411E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{746F013A-2B5B-4F2D-8B80-FCC1602E6AD8}.Debug|Any CPU.ActiveCfg = Debug
+		{746F013A-2B5B-4F2D-8B80-FCC1602E6AD8}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

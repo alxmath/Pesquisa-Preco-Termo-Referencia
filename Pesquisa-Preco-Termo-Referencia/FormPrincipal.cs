@@ -152,7 +152,8 @@ namespace Pesquisa_Preco_Termo_Referencia
 
         private void GetOrdenador()
         {
-            string ordenadorPath = Application.StartupPath.ToString() + @"..\..\..\Data\ordenador.txt";
+            //string ordenadorPath = Application.StartupPath.ToString() + @"..\..\..\Data\ordenador.txt";
+            string ordenadorPath = Application.StartupPath.ToString() + @"\Data\ordenador.txt";
 
             using (StreamReader sr = File.OpenText(ordenadorPath))
             {

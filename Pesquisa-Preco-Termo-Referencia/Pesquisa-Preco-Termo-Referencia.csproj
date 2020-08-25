@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bag-basket-search-shopping32.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -166,6 +169,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="bag-basket-search-shopping32.ico" />
     <Content Include="Data\ordenador.txt" />
     <Content Include="Data\users.txt" />
     <Content Include="Resources\bag-basket-cart-ecommerce-search-shopping-store.png" />
