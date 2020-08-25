@@ -29,7 +29,7 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
 
             if (cbxOrdenador.Text == string.Empty)
             {
-                MessageBox.Show(this, "Favor escolher o ordenador da pesquisar.",
+                MessageBox.Show(this, "Favor escolher o ordenador da pesquisa.",
                     "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cbxOrdenador.Focus();
                 return;
