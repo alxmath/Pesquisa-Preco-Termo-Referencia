@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("AJ Software e Automação")]
 [assembly: AssemblyProduct("Pesquisa de Preço e Termo de Referência - Automação")]
-[assembly: AssemblyCopyright("Copyright ©  2020 - alxmath@gmail.com")]
+[assembly: AssemblyCopyright("©  2020 - Alex Santos Pinto - alxmath@gmail.com")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

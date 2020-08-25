@@ -64,7 +64,7 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
 
 
                 cbxOrdenador.DataSource = ordernadores;
-
+                cbxOrdenador.SelectedIndex = -1;
             }
         }
 
@@ -87,7 +87,7 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
                     string cargo = line[2];
                     string isAtual = line[3];
 
-                    if (nome.Equals(cbxOrdenador.Text) && isAtual.Equals("Atual"))
+                    if (nome.Equals(cbxOrdenador.Text))
                     {
                         OrdenadorRepository.Ordenadores.Clear();
                         OrdenadorRepository.Ordenadores.Add(new Ordenador(nome, rg, cargo, isAtual));
@@ -141,15 +141,15 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
             }
         }
 
-        private void InserirMes(CheckBox chk)
-        {
-            meses.Add(chk.Text);
-        }
+        //private void InserirMes(CheckBox chk)
+        //{
+        //    meses.Add(chk.Text);
+        //}
 
-        private void RemoverMes(CheckBox chk)
-        {
-            meses.Remove(chk.Text);
-        }
+        //private void RemoverMes(CheckBox chk)
+        //{
+        //    meses.Remove(chk.Text);
+        //}
 
         private void groupBox2_Enter(object sender, EventArgs e)
         {

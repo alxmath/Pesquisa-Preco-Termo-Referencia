@@ -166,6 +166,7 @@ namespace Pesquisa_Preco_Termo_Referencia
 
                     if (isAtual == "Atual")
                     {
+                        OrdenadorRepository.Ordenadores.Clear();
                         OrdenadorRepository.Ordenadores.Add(new Ordenador(nome, rg, cargo, isAtual));
                     }
                 }
