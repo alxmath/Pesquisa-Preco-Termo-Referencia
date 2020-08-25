@@ -79,6 +79,12 @@
     <Compile Include="Forms\FormAssuntoTermo.Designer.cs">
       <DependentUpon>FormAssuntoTermo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormOrdenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormOrdenador.Designer.cs">
+      <DependentUpon>FormOrdenador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormPesquisa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAssuntoTermo.resx">
       <DependentUpon>FormAssuntoTermo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormOrdenador.resx">
+      <DependentUpon>FormOrdenador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormPesquisa.resx">
       <DependentUpon>FormPesquisa.cs</DependentUpon>
@@ -146,6 +155,7 @@
   <ItemGroup>
     <Content Include="Data\ordenador.txt" />
     <Content Include="Data\users.txt" />
+    <Content Include="Resources\bag-basket-search-shopping32.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

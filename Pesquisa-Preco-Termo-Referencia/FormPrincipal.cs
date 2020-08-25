@@ -132,6 +132,8 @@ namespace Pesquisa_Preco_Termo_Referencia
                 return;
             }
 
+            GetOrdenador();
+
             SiafisicoReposiories.Siafisicos[0].ProcessoPedido = txtProcessoPedido.Text.Trim();
             
             if (cbxLoteItem.Text == "lote")
@@ -156,6 +158,30 @@ namespace Pesquisa_Preco_Termo_Referencia
 
             FormPesquisa formPesquisa = new FormPesquisa();
             formPesquisa.ShowDialog();
+        }
+
+        private void GetOrdenador()
+        {
+            string ordenadorPath = Application.StartupPath.ToString() + @"..\..\..\Data\ordenador.txt";
+
+            using (StreamReader sr = File.OpenText(ordenadorPath))
+            {
+                while (!sr.EndOfStream)
+                {
+                    string[] line = sr.ReadLine().Split(',');
+                    string nome = line[0];
+                    string rg = line[1];
+                    string cargo = line[2];
+                    string isAtual = line[3];
+
+                    if (isAtual == "Atual")
+                    {
+                        SiafisicoReposiories.Siafisicos[0].OrdenadorNome = nome;
+                        SiafisicoReposiories.Siafisicos[0].OrdenadorRG = rg;
+                        SiafisicoReposiories.Siafisicos[0].OrdenadorCargo = cargo;
+                    }
+                }
+            }
         }
 
         private void btnSair_Click(object sender, EventArgs e)

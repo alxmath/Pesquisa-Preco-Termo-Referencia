@@ -48,6 +48,14 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
 
         private void FormAssuntoTermo_Load(object sender, EventArgs e)
         {
+            CarregarOrdenadores();
+            cbxOrdenador.SelectedIndex = -1;
+        }
+
+        private void CarregarOrdenadores()
+        {
+
+            cbxOrdenador.DataSource = null;
             List<string> ordernadores = new List<string>();
             string userPath = Application.StartupPath.ToString() + @"..\..\..\Data\ordenador.txt";
 
@@ -64,8 +72,6 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
                 cbxOrdenador.DataSource = ordernadores;
 
             }
-
-            cbxOrdenador.SelectedIndex = -1;
         }
 
         private void cbxOrdenador_SelectedIndexChanged(object sender, EventArgs e)
@@ -177,6 +183,13 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
         private void checkJan_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAdicionarNovo_Click(object sender, EventArgs e)
+        {
+            FormOrdenador formOrdenador = new FormOrdenador();
+            formOrdenador.ShowDialog();
+            CarregarOrdenadores();
         }
     }
 }

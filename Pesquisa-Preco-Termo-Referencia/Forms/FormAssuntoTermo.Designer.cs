@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAssuntoTermo));
             this.richAssunto = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxOrdenador = new System.Windows.Forms.ComboBox();
@@ -90,7 +91,7 @@
             this.cbxOrdenador.FormattingEnabled = true;
             this.cbxOrdenador.Location = new System.Drawing.Point(12, 438);
             this.cbxOrdenador.Name = "cbxOrdenador";
-            this.cbxOrdenador.Size = new System.Drawing.Size(425, 24);
+            this.cbxOrdenador.Size = new System.Drawing.Size(430, 24);
             this.cbxOrdenador.TabIndex = 2;
             this.cbxOrdenador.SelectedIndexChanged += new System.EventHandler(this.cbxOrdenador_SelectedIndexChanged);
             // 
@@ -108,12 +109,13 @@
             // 
             this.btnAdicionarNovo.BackColor = System.Drawing.Color.DarkCyan;
             this.btnAdicionarNovo.ForeColor = System.Drawing.Color.White;
-            this.btnAdicionarNovo.Location = new System.Drawing.Point(448, 437);
+            this.btnAdicionarNovo.Location = new System.Drawing.Point(448, 438);
             this.btnAdicionarNovo.Name = "btnAdicionarNovo";
-            this.btnAdicionarNovo.Size = new System.Drawing.Size(24, 25);
+            this.btnAdicionarNovo.Size = new System.Drawing.Size(24, 24);
             this.btnAdicionarNovo.TabIndex = 3;
             this.btnAdicionarNovo.Text = "+";
             this.btnAdicionarNovo.UseVisualStyleBackColor = false;
+            this.btnAdicionarNovo.Click += new System.EventHandler(this.btnAdicionarNovo_Click);
             // 
             // btnEnviar
             // 
@@ -483,6 +485,7 @@
             this.Controls.Add(this.richAssunto);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -505,7 +508,6 @@
 
         private System.Windows.Forms.RichTextBox richAssunto;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbxOrdenador;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAdicionarNovo;
         private System.Windows.Forms.Button btnEnviar;
@@ -535,5 +537,6 @@
         private System.Windows.Forms.RadioButton radioIN;
         private System.Windows.Forms.RadioButton radioDL;
         private System.Windows.Forms.RadioButton radioPE;
+        private System.Windows.Forms.ComboBox cbxOrdenador;
     }
 }

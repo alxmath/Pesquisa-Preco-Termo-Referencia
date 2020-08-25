@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.richTexto = new System.Windows.Forms.RichTextBox();
             this.btnAbrir = new System.Windows.Forms.Button();
             this.ofd = new System.Windows.Forms.OpenFileDialog();
@@ -241,6 +242,7 @@
             this.Controls.Add(this.btnGerarPesquisa);
             this.Controls.Add(this.btnAbrir);
             this.Controls.Add(this.richTexto);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

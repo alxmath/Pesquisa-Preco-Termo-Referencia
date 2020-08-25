@@ -55,7 +55,7 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Erro ao carregar a tabela com os usuários: " + ex.Message,
-                    "Núcleo de Finanças", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -102,7 +102,7 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
 
             if (string.IsNullOrEmpty(cbxCargo.Text))
             {
-                MessageBox.Show(this, "Favor escolher um cargo.", "Núcleo de Finanças", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(this, "Favor escolher um cargo.", "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -118,7 +118,7 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
                 using (StreamWriter sw = File.AppendText(userPath))
                 {
                     sw.WriteLine(nome + "," + rg + "," + cargo + "," + nucleo);
-                    MessageBox.Show(this, "Assinatura inserida. Agora ela estará disponível para inserções.", "Núcleo de Finanças", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(this, "Assinatura inserida. Agora ela estará disponível para inserções.", "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     SiafisicoReposiories.Siafisicos[0].Nome = nome;
                     SiafisicoReposiories.Siafisicos[0].RG = rg;
@@ -131,7 +131,7 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
             catch (Exception ex)
             {
                 MessageBox.Show(this, "Não foi possível adicionar usuário: " + ex.Message,
-                    "Núcleo de Finanças", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -140,7 +140,7 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
         {
             if (string.IsNullOrEmpty(txt.Text.Trim()))
             {
-                MessageBox.Show(this, message, "Núcleo de Finanças", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(this, message, "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt.Focus();
                 return false;
             }
