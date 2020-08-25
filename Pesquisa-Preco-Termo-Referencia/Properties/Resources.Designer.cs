@@ -59,5 +59,15 @@ namespace Pesquisa_Preco_Termo_Referencia.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bag_basket_cart_ecommerce_search_shopping_store {
+            get {
+                object obj = ResourceManager.GetObject("bag-basket-cart-ecommerce-search-shopping-store", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

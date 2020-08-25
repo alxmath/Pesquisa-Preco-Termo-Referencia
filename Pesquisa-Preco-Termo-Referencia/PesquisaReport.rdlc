@@ -921,21 +921,8 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!ProcessoPedido.Value</Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>8pt</FontSize>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value xml:space="preserve"> </Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>8pt</FontSize>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>=Fields!TipoLicitacaoLoteItem.Value</Value>
+                <Value>=First(Fields!ProcessoPedido.Value, "SiafisicoDS") +
+" " + First(Fields!TipoLicitacaoLoteItem.Value, "SiafisicoDS")</Value>
                 <Style>
                   <FontFamily>Verdana</FontFamily>
                   <FontSize>8pt</FontSize>
@@ -970,14 +957,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Assis, </Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>8pt</FontSize>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>=Fields!Now.Value</Value>
+                <Value>= "Assis, " + Format(Now(),"dd \de MMMM \de yyyy")</Value>
                 <Style>
                   <FontFamily>Verdana</FontFamily>
                   <FontSize>8pt</FontSize>
@@ -1005,77 +985,17 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox9">
+      <Textbox Name="Textbox11">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!Nome.Value</Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>RG: </Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>=Fields!RG.Value</Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Fields!Cargo.Value</Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Fields!Nucleo.Value</Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
+                <Value>=First(Fields!OrdenadorNome.Value, "OrdenadorDS") + System.Environment.NewLine +
+"RG: " + First(Fields!OrdenadorRG.Value, "OrdenadorDS") + System.Environment.NewLine +
+First(Fields!OrdenadorCargo.Value, "OrdenadorDS") + System.Environment.NewLine +
+"Hospital Regional de Assis"</Value>
                 <Style>
                   <FontFamily>Verdana</FontFamily>
                   <FontSize>7pt</FontSize>
@@ -1088,10 +1008,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>7.56391cm</Top>
-        <Left>6.98341cm</Left>
-        <Height>1.73771cm</Height>
-        <Width>6.20417cm</Width>
+        <Top>7.61683cm</Top>
+        <Left>13.28753cm</Left>
+        <Height>1.92292cm</Height>
+        <Width>6.35699cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -1103,77 +1023,17 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox11">
+      <Textbox Name="Cargo">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!OrdenadorNome.Value</Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>RG: </Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>=Fields!OrdenadorRG.Value</Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Ordenador de Despesa</Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Fields!OrdenadorCargo.Value</Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Hospital Regional de Assis</Value>
+                <Value>=First(Fields!Nome.Value, "UserDS") + System.Environment.NewLine +
+"RG: " + First(Fields!RG.Value, "UserDS") + System.Environment.NewLine +
+First(Fields!Cargo.Value, "UserDS") + System.Environment.NewLine +
+First(Fields!Nucleo.Value, "UserDS")</Value>
                 <Style>
                   <FontFamily>Verdana</FontFamily>
                   <FontSize>7pt</FontSize>
@@ -1185,11 +1045,11 @@
             </Style>
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>7.56391cm</Top>
-        <Left>14.07535cm</Left>
-        <Height>1.92292cm</Height>
-        <Width>5.88667cm</Width>
+        <rd:DefaultName>Cargo</rd:DefaultName>
+        <Top>7.61683cm</Top>
+        <Left>6.5142cm</Left>
+        <Height>1.87cm</Height>
+        <Width>6.35699cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -1382,6 +1242,20 @@
       </ConnectionProperties>
       <rd:DataSourceID>1c77d5e6-0207-472a-a7b6-cbbdf1379321</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="Pesquisa_Preco_Termo_ReferenciaEntities1">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>f4cc400c-d625-4108-84a0-19e7d4a6ba27</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="Pesquisa_Preco_Termo_ReferenciaEntities2">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>7292f5d6-1b3a-49ad-adc5-673be089fb5b</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="SiafisicoDS">
@@ -1392,10 +1266,6 @@
       <Fields>
         <Field Name="Assunto">
           <DataField>Assunto</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Cargo">
-          <DataField>Cargo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="CodigoSiafisico">
@@ -1410,28 +1280,8 @@
           <DataField>Item</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Nome">
-          <DataField>Nome</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="Now">
           <DataField>Now</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Nucleo">
-          <DataField>Nucleo</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="OrdenadorCargo">
-          <DataField>OrdenadorCargo</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="OrdenadorNome">
-          <DataField>OrdenadorNome</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="OrdenadorRG">
-          <DataField>OrdenadorRG</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ProcessoPedido">
@@ -1441,10 +1291,6 @@
         <Field Name="Quantidade">
           <DataField>Quantidade</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="RG">
-          <DataField>RG</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="TipoLicitacao">
           <DataField>TipoLicitacao</DataField>
@@ -1463,6 +1309,64 @@
         <rd:DataSetName>Pesquisa_Preco_Termo_Referencia.Entities</rd:DataSetName>
         <rd:TableName>Siafisico</rd:TableName>
         <rd:ObjectDataSourceType>Pesquisa_Preco_Termo_Referencia.Entities.Siafisico, Pesquisa-Preco-Termo-Referencia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="UserDS">
+      <Query>
+        <DataSourceName>Pesquisa_Preco_Termo_ReferenciaEntities1</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Cargo">
+          <DataField>Cargo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Nome">
+          <DataField>Nome</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Nucleo">
+          <DataField>Nucleo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RG">
+          <DataField>RG</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Pesquisa_Preco_Termo_Referencia.Entities</rd:DataSetName>
+        <rd:TableName>User</rd:TableName>
+        <rd:ObjectDataSourceType>Pesquisa_Preco_Termo_Referencia.Entities.User, Pesquisa-Preco-Termo-Referencia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="OrdenadorDS">
+      <Query>
+        <DataSourceName>Pesquisa_Preco_Termo_ReferenciaEntities2</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="OrdenadorCargo">
+          <DataField>OrdenadorCargo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrdenadorIsAtual">
+          <DataField>OrdenadorIsAtual</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrdenadorNome">
+          <DataField>OrdenadorNome</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrdenadorRG">
+          <DataField>OrdenadorRG</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Pesquisa_Preco_Termo_Referencia.Entities</rd:DataSetName>
+        <rd:TableName>Ordenador</rd:TableName>
+        <rd:ObjectDataSourceType>Pesquisa_Preco_Termo_Referencia.Entities.Ordenador, Pesquisa-Preco-Termo-Referencia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

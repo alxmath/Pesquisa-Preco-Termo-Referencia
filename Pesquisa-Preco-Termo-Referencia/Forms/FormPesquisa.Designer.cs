@@ -54,6 +54,7 @@
             this.Name = "FormPesquisa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisa de Preço - Núcleo de Compras";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPesquisa_FormClosing);
             this.Load += new System.EventHandler(this.FormPesquisa_Load);
             this.ResumeLayout(false);
 

@@ -179,7 +179,7 @@
             this.Name = "FormOrdenador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Novo Ordenador - Núcleo de Compras";
-            this.Load += new System.EventHandler(this.FormOrdenador_Load);
+       
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

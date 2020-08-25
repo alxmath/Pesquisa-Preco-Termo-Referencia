@@ -45,6 +45,7 @@
             this.txtProcessoPedido = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTipPrincipal = new System.Windows.Forms.ToolTip(this.components);
+            this.linkSobre = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,9 +103,9 @@
             this.groupBox1.Controls.Add(this.radioPregao);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.groupBox1.Location = new System.Drawing.Point(12, 16);
+            this.groupBox1.Location = new System.Drawing.Point(12, 34);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(563, 125);
+            this.groupBox1.Size = new System.Drawing.Size(563, 105);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo de Licitação";
@@ -114,8 +115,8 @@
             this.cbxLoteItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxLoteItem.FormattingEnabled = true;
             this.cbxLoteItem.Items.AddRange(new object[] {
-            "item",
-            "lote"});
+            "Por item",
+            "Por lote"});
             this.cbxLoteItem.Location = new System.Drawing.Point(109, 40);
             this.cbxLoteItem.Name = "cbxLoteItem";
             this.cbxLoteItem.Size = new System.Drawing.Size(121, 24);
@@ -228,12 +229,24 @@
             this.toolTipPrincipal.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTipPrincipal.ToolTipTitle = "Ajuda Rápida";
             // 
+            // linkSobre
+            // 
+            this.linkSobre.AutoSize = true;
+            this.linkSobre.Location = new System.Drawing.Point(540, 18);
+            this.linkSobre.Name = "linkSobre";
+            this.linkSobre.Size = new System.Drawing.Size(35, 13);
+            this.linkSobre.TabIndex = 8;
+            this.linkSobre.TabStop = true;
+            this.linkSobre.Text = "Sobre";
+            this.linkSobre.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSobre_LinkClicked);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(589, 644);
+            this.Controls.Add(this.linkSobre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtProcessoPedido);
             this.Controls.Add(this.btnSair);
@@ -272,6 +285,7 @@
         private System.Windows.Forms.ToolTip toolTipPrincipal;
         private System.Windows.Forms.ComboBox cbxLoteItem;
         private System.Windows.Forms.RadioButton radioConvite;
+        private System.Windows.Forms.LinkLabel linkSobre;
     }
 }
 

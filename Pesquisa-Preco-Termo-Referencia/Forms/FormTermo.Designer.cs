@@ -53,6 +53,7 @@
             this.Name = "FormTermo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Termo de Referência - Núcleo de Compras";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormTermo_FormClosing);
             this.Load += new System.EventHandler(this.FormTermo_Load);
             this.ResumeLayout(false);
 

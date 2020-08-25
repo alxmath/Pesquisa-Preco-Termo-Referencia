@@ -599,7 +599,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>=Fields!Assunto.Value</Value>
+                <Value>=First(Fields!Assunto.Value, "TermoDS")</Value>
                 <Style>
                   <FontFamily>Verdana</FontFamily>
                   <FontWeight>Normal</FontWeight>
@@ -635,70 +635,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!OrdenadorNome.Value</Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>RG: </Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>=Fields!OrdenadorRG.Value</Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Ordenador de Despesa</Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Fields!OrdenadorCargo.Value</Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Hospital Regional de Assis</Value>
+                <Value>=First(Fields!OrdenadorNome.Value, "OrdenadorDS") + System.Environment.NewLine +
+"RG: " + First(Fields!OrdenadorRG.Value, "OrdenadorDS") + System.Environment.NewLine +
+First(Fields!OrdenadorCargo.Value, "OrdenadorDS") + System.Environment.NewLine +
+"Hospital Regional de Assis"</Value>
                 <Style>
                   <FontFamily>Verdana</FontFamily>
                   <FontSize>7pt</FontSize>
@@ -793,56 +733,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!Nome.Value</Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>RG: </Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>=Fields!RG.Value</Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Fields!Cargo.Value</Value>
-                <Style>
-                  <FontFamily>Verdana</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Fields!Nucleo.Value</Value>
+                <Value>=First(Fields!Nome.Value, "UserDS") + System.Environment.NewLine + 
+"RG: " + First(Fields!RG.Value, "UserDS") + System.Environment.NewLine +
+First(Fields!Cargo.Value, "UserDS") + System.Environment.NewLine +
+First(Fields!Nucleo.Value, "UserDS")</Value>
                 <Style>
                   <FontFamily>Verdana</FontFamily>
                   <FontSize>7pt</FontSize>
@@ -1051,6 +945,20 @@
       </ConnectionProperties>
       <rd:DataSourceID>6d7be4b1-deba-4865-b05d-46ed68e8de0d</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="Pesquisa_Preco_Termo_ReferenciaEntities1">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>3683651b-cb44-4d82-9ffe-865c6e1d956a</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="Pesquisa_Preco_Termo_ReferenciaEntities2">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>7c17e413-c284-45c8-93d9-a7f2dd4b5d5b</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="TermoDS">
@@ -1061,10 +969,6 @@
       <Fields>
         <Field Name="Assunto">
           <DataField>Assunto</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Cargo">
-          <DataField>Cargo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="CodigoSiafisico">
@@ -1079,28 +983,8 @@
           <DataField>Item</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Nome">
-          <DataField>Nome</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="Now">
           <DataField>Now</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Nucleo">
-          <DataField>Nucleo</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="OrdenadorCargo">
-          <DataField>OrdenadorCargo</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="OrdenadorNome">
-          <DataField>OrdenadorNome</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="OrdenadorRG">
-          <DataField>OrdenadorRG</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ProcessoPedido">
@@ -1110,10 +994,6 @@
         <Field Name="Quantidade">
           <DataField>Quantidade</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="RG">
-          <DataField>RG</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="TipoLicitacao">
           <DataField>TipoLicitacao</DataField>
@@ -1132,6 +1012,64 @@
         <rd:DataSetName>Pesquisa_Preco_Termo_Referencia.Entities</rd:DataSetName>
         <rd:TableName>Siafisico</rd:TableName>
         <rd:ObjectDataSourceType>Pesquisa_Preco_Termo_Referencia.Entities.Siafisico, Pesquisa-Preco-Termo-Referencia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="UserDS">
+      <Query>
+        <DataSourceName>Pesquisa_Preco_Termo_ReferenciaEntities1</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Cargo">
+          <DataField>Cargo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Nome">
+          <DataField>Nome</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Nucleo">
+          <DataField>Nucleo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RG">
+          <DataField>RG</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Pesquisa_Preco_Termo_Referencia.Entities</rd:DataSetName>
+        <rd:TableName>User</rd:TableName>
+        <rd:ObjectDataSourceType>Pesquisa_Preco_Termo_Referencia.Entities.User, Pesquisa-Preco-Termo-Referencia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="OrdenadorDS">
+      <Query>
+        <DataSourceName>Pesquisa_Preco_Termo_ReferenciaEntities2</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="OrdenadorCargo">
+          <DataField>OrdenadorCargo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrdenadorIsAtual">
+          <DataField>OrdenadorIsAtual</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrdenadorNome">
+          <DataField>OrdenadorNome</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrdenadorRG">
+          <DataField>OrdenadorRG</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Pesquisa_Preco_Termo_Referencia.Entities</rd:DataSetName>
+        <rd:TableName>Ordenador</rd:TableName>
+        <rd:ObjectDataSourceType>Pesquisa_Preco_Termo_Referencia.Entities.Ordenador, Pesquisa-Preco-Termo-Referencia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

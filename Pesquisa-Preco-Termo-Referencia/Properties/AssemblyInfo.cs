@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Pesquisa-Preco-Termo-Referencia")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Pesquisa de Preço e Termo de Referência")]
+[assembly: AssemblyDescription("Software desenvolvido por Alex Santos para automação de Termo de Referência e Pesquisa de Preço realizados pelo Núcleo de Compras do Hospital Regional de Assis")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Pesquisa-Preco-Termo-Referencia")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCompany("AJ Software e Automação")]
+[assembly: AssemblyProduct("Pesquisa de Preço e Termo de Referência - Automação")]
+[assembly: AssemblyCopyright("Copyright ©  2020 - alxmath@gmail.com")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

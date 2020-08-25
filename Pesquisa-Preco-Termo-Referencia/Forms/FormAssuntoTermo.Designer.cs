@@ -323,7 +323,7 @@
             this.checkJan.Tag = "janeiro";
             this.checkJan.Text = "Jan";
             this.checkJan.UseVisualStyleBackColor = true;
-            this.checkJan.CheckedChanged += new System.EventHandler(this.checkJan_CheckedChanged);
+            
             this.checkJan.Click += new System.EventHandler(this.CheckMes_CheckedChanged);
             // 
             // groupBox2

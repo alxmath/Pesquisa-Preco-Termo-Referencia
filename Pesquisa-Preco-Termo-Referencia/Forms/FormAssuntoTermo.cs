@@ -2,13 +2,7 @@
 using Pesquisa_Preco_Termo_Referencia.Repositories;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pesquisa_Preco_Termo_Referencia.Forms
@@ -48,8 +42,8 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
 
         private void FormAssuntoTermo_Load(object sender, EventArgs e)
         {
-            CarregarOrdenadores();
             cbxOrdenador.SelectedIndex = -1;
+            CarregarOrdenadores();
         }
 
         private void CarregarOrdenadores()
@@ -91,14 +85,14 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
                     string nome = line[0];
                     string rg = line[1];
                     string cargo = line[2];
+                    string isAtual = line[3];
 
-                    if (nome == cbxOrdenador.Text)
+                    if (nome.Equals(cbxOrdenador.Text) && isAtual.Equals("Atual"))
                     {
-                        SiafisicoReposiories.Siafisicos[0].OrdenadorNome = nome;
-                        SiafisicoReposiories.Siafisicos[0].OrdenadorRG = rg;
-                        SiafisicoReposiories.Siafisicos[0].OrdenadorCargo = cargo;
+                        OrdenadorRepository.Ordenadores.Clear();
+                        OrdenadorRepository.Ordenadores.Add(new Ordenador(nome, rg, cargo, isAtual));
                     }
-                }      
+                }
             }
         }
 
@@ -109,7 +103,7 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
             {
                 assuntoArray[0] = "Memo. " + txtMemo.Text.Trim() + " - ";
             }
-                
+
         }
 
         private void radioServico_CheckedChanged(object sender, EventArgs e)
@@ -178,11 +172,6 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
                 assuntoArray[3] = ", na modalidade de " + radio.Text + ", para este HRA";
                 richAssunto.Text = string.Join("", assuntoArray);
             }
-        }
-
-        private void checkJan_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnAdicionarNovo_Click(object sender, EventArgs e)

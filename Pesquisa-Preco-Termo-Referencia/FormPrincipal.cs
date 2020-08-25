@@ -3,12 +3,7 @@ using Pesquisa_Preco_Termo_Referencia.Forms;
 using Pesquisa_Preco_Termo_Referencia.Repositories;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Pesquisa_Preco_Termo_Referencia
@@ -20,7 +15,7 @@ namespace Pesquisa_Preco_Termo_Referencia
             InitializeComponent();
         }
 
-        
+
         private void btnAbrir_Click(object sender, EventArgs e)
         {
 
@@ -74,16 +69,7 @@ namespace Pesquisa_Preco_Termo_Referencia
                             siafisico.CodigoSiafisico = relevantWords[2];
                             siafisico.Unidade = relevantWords[3];
                             siafisico.Quantidade = double.Parse(relevantWords[4]);
-                            siafisico.Now = DateTime.Now.ToLongDateString();
-
-                            //if (radioPregao.Checked)
-                            //{
-                            //    siafisico.TipoLicitacao = "O VALOR REFERENCIAL FOI OBTIDO ATRAVÉS DE PESQUISA DE PREÇO";
-                            //}
-                            //else if (radioAta.Checked || radioDispensa.Checked)
-                            //{
-                            //    siafisico.TipoLicitacao = "SERÁ ADQUIRIDO ATRAVÉS DA EMPRESA";
-                            //}
+                            //siafisico.Now = DateTime.Now.ToLongDateString();
 
                             siafisicos.Add(siafisico);
                             i++;
@@ -105,18 +91,11 @@ namespace Pesquisa_Preco_Termo_Referencia
                 MessageBox.Show(this, "Erro ao tentar abrir arquivo de texto. Certifique-se que o arquivo que está tentando abrir contenha um pedido válido: "
                     + ex.Message, "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            //foreach (Siafisico siaf in siafisicos)
-            //{
-            //    Console.WriteLine(siaf);
-            //}
         }
 
         private void btnGerarPesquisa_Click(object sender, EventArgs e)
         {
 
-            FormUser formUser = new FormUser();
-            formUser.ShowDialog();
 
             if (richTexto.Text == string.Empty)
             {
@@ -132,13 +111,24 @@ namespace Pesquisa_Preco_Termo_Referencia
                 return;
             }
 
+            FormUser formUser = new FormUser();
+            formUser.ShowDialog();
+
             GetOrdenador();
 
-            SiafisicoReposiories.Siafisicos[0].ProcessoPedido = txtProcessoPedido.Text.Trim();
-            
-            if (cbxLoteItem.Text == "lote")
+            if (txtProcessoPedido.Text.Trim().Length > 0)
             {
-                SiafisicoReposiories.Siafisicos[0].TipoLicitacaoLoteItem = "Licitação por " + cbxLoteItem.Text;
+                SiafisicoReposiories.Siafisicos[0].ProcessoPedido = txtProcessoPedido.Text.Trim() + " - ";
+
+            }
+            else
+            {
+                SiafisicoReposiories.Siafisicos[0].ProcessoPedido = txtProcessoPedido.Text.Trim();
+            }
+
+            if (cbxLoteItem.Text == "Por lote")
+            {
+                SiafisicoReposiories.Siafisicos[0].TipoLicitacaoLoteItem = "Licitação por lote.";
             }
 
             if (radioPregao.Checked || radioConvite.Checked)
@@ -176,9 +166,7 @@ namespace Pesquisa_Preco_Termo_Referencia
 
                     if (isAtual == "Atual")
                     {
-                        SiafisicoReposiories.Siafisicos[0].OrdenadorNome = nome;
-                        SiafisicoReposiories.Siafisicos[0].OrdenadorRG = rg;
-                        SiafisicoReposiories.Siafisicos[0].OrdenadorCargo = cargo;
+                        OrdenadorRepository.Ordenadores.Add(new Ordenador(nome, rg, cargo, isAtual));
                     }
                 }
             }
@@ -231,6 +219,12 @@ namespace Pesquisa_Preco_Termo_Referencia
         {
             radioPregao.Checked = false;
             cbxLoteItem.SelectedIndex = 1;
+        }
+
+        private void linkSobre_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormSobre formSobre = new FormSobre();
+            formSobre.ShowDialog();
         }
     }
 }

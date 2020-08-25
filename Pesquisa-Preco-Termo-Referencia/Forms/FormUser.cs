@@ -79,12 +79,7 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
             string cargo = dgvUsers.SelectedCells[2].Value.ToString();
             string nucleo = dgvUsers.SelectedCells[3].Value.ToString();
 
-            SiafisicoReposiories.Siafisicos[0].Nome = nome;
-            SiafisicoReposiories.Siafisicos[0].RG = rg;
-            SiafisicoReposiories.Siafisicos[0].Cargo = cargo;
-            SiafisicoReposiories.Siafisicos[0].Nucleo = nucleo;
-
-
+            UserRepository.Users.Add(new User(nome, rg, cargo, nucleo));
             Close();
         }
 
@@ -120,11 +115,7 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
                     sw.WriteLine(nome + "," + rg + "," + cargo + "," + nucleo);
                     MessageBox.Show(this, "Assinatura inserida. Agora ela estará disponível para inserções.", "Núcleo de Compras", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    SiafisicoReposiories.Siafisicos[0].Nome = nome;
-                    SiafisicoReposiories.Siafisicos[0].RG = rg;
-                    SiafisicoReposiories.Siafisicos[0].Cargo = cargo;
-                    SiafisicoReposiories.Siafisicos[0].Nucleo = nucleo;
-
+                    UserRepository.Users.Add(new User(nome, rg, cargo, nucleo));
                     Close();
                 }
             }
@@ -150,17 +141,13 @@ namespace Pesquisa_Preco_Termo_Referencia.Forms
 
         private void FormUser_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (string.IsNullOrEmpty(SiafisicoReposiories.Siafisicos[0].Nome) && dgvUsers.Rows.Count != 0)
+            if (UserRepository.Users.Count == 0 && dgvUsers.Rows.Count != 0)
             {
                 string nome = dgvUsers.SelectedCells[0].Value.ToString();
                 string rg = dgvUsers.SelectedCells[1].Value.ToString();
                 string cargo = dgvUsers.SelectedCells[2].Value.ToString();
                 string nucleo = dgvUsers.SelectedCells[3].Value.ToString();
-
-                SiafisicoReposiories.Siafisicos[0].Nome = nome;
-                SiafisicoReposiories.Siafisicos[0].RG = rg;
-                SiafisicoReposiories.Siafisicos[0].Cargo = cargo;
-                SiafisicoReposiories.Siafisicos[0].Nucleo = nucleo;
+                UserRepository.Users.Add(new User(nome, rg, cargo, nucleo));
             }
         }
     }

@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Ordenador.cs" />
     <Compile Include="Entities\Siafisico.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="FormPrincipal.cs">
@@ -103,9 +104,17 @@
     <Compile Include="Forms\FormUser.Designer.cs">
       <DependentUpon>FormUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSobre.Designer.cs">
+      <DependentUpon>FormSobre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\OrdenadorRepository.cs" />
     <Compile Include="Repositories\SiafisicoReposiories.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
@@ -125,6 +134,9 @@
     <EmbeddedResource Include="Forms\FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSobre.resx">
+      <DependentUpon>FormSobre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -139,6 +151,7 @@
     <EmbeddedResource Include="TermoReport.rdlc" />
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Pesquisa_Preco_Termo_Referencia.Entities.Ordenador.datasource" />
     <None Include="Properties\DataSources\Pesquisa_Preco_Termo_Referencia.Entities.Siafisico.datasource" />
     <None Include="Properties\DataSources\Pesquisa_Preco_Termo_Referencia.Entities.User.datasource" />
     <None Include="Properties\Settings.settings">
@@ -155,6 +168,7 @@
   <ItemGroup>
     <Content Include="Data\ordenador.txt" />
     <Content Include="Data\users.txt" />
+    <Content Include="Resources\bag-basket-cart-ecommerce-search-shopping-store.png" />
     <Content Include="Resources\bag-basket-search-shopping32.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
