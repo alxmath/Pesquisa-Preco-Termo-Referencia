@@ -85,7 +85,7 @@
             this.btnGerarPesquisa.BackColor = System.Drawing.Color.Green;
             this.btnGerarPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerarPesquisa.ForeColor = System.Drawing.Color.White;
-            this.btnGerarPesquisa.Location = new System.Drawing.Point(425, 589);
+            this.btnGerarPesquisa.Location = new System.Drawing.Point(425, 593);
             this.btnGerarPesquisa.Name = "btnGerarPesquisa";
             this.btnGerarPesquisa.Size = new System.Drawing.Size(150, 37);
             this.btnGerarPesquisa.TabIndex = 5;
@@ -177,7 +177,7 @@
             this.btnTermo.BackColor = System.Drawing.Color.DarkCyan;
             this.btnTermo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTermo.ForeColor = System.Drawing.Color.White;
-            this.btnTermo.Location = new System.Drawing.Point(269, 589);
+            this.btnTermo.Location = new System.Drawing.Point(269, 593);
             this.btnTermo.Name = "btnTermo";
             this.btnTermo.Size = new System.Drawing.Size(150, 37);
             this.btnTermo.TabIndex = 4;
@@ -191,7 +191,7 @@
             this.btnSair.BackColor = System.Drawing.Color.Firebrick;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.White;
-            this.btnSair.Location = new System.Drawing.Point(12, 589);
+            this.btnSair.Location = new System.Drawing.Point(12, 593);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(150, 37);
             this.btnSair.TabIndex = 3;
